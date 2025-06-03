@@ -1,0 +1,622 @@
+/* Added from here*/
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    font-size: 14px;
+}
+
+.section > div {
+    width: 100%;
+}
+
+
+.section p {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.section button {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+}
+
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-left ul,
+.nav-right ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.nav-left li,
+.nav-right li {
+    margin: 0.25rem 0;
+}
+
+
+.section-2,
+.section-4,
+.section-5,
+.section-9,
+.section-10 {
+    flex-direction: column;
+}
+
+/* Larger screens: side by side layout */
+@media (min-width: 768px) {
+    .section {
+        flex-direction: row;
+        font-size: 16px;
+        align-items: center;
+    }
+
+    .section img {
+        margin: 0;
+    }
+
+    .section p {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    /*header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }*/
+
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nav-left li,
+    .nav-right li {
+        margin: 0;
+    }
+}
+
+/*  Added to here  */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #007BFF3A;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    padding: 1rem 5%;
+    /*background: #007BFF;*/
+    color: white;
+    text-align: center;
+}
+
+.nav-left, .nav-right {
+        flex: 1;
+    }
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    z-index: 2;
+}
+.nav-left {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-right {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.nav-left ul,
+.nav-right ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+.nav-left ul {
+    justify-content: flex-start;
+}
+
+.nav-right ul {
+    justify-content: flex-end;
+}
+
+.nav-left li a,
+.nav-right li a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem;
+    }
+
+.nav-left li a:hover,
+.nav-right li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+
+.menu-toggle {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-container {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 2rem;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 350px;
+    padding: 2rem 5%;
+    gap: 2rem;
+}
+
+.section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.section button {
+    background-color: #476281;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 20vh;
+    padding: 0.2rem;
+}
+
+.section button:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.section.section-1 {
+    height: 85vh;
+    background-image: url('../assets/images/MaleMan-mindset.jpg');
+    background-size: contain;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+
+.section-1-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.section-1-content p {
+    flex: 0 0 auto;
+    max-width: 30%;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    padding: 1rem;
+    border-radius: 10px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.know-more-btn {
+    align-self: center;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.section-2,.section-4,.section-5,.section-9,.section-10,.section-12,.section-13 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 70px;
+    margin-top: 20px;
+}
+
+.section-2 > div,.section-4 > div,.section-5 > div,.section-9 > div,.section-10 > div,.section-12 > div,.section-13 > div {
+    flex: 1 1 45%;
+}
+
+.section-2 > div:first-child, .section-3, .section-7, .section-11, .section-4 > div:first-child, .section-4 > div:last-child, .section-5 > div:first-child, .section-9 > div:first-child, .section-10 > div:first-child  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.section-3 p, .section-4 > div:first-child p, .section-7 p, .section-11 p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.section-2 > div:last-child img,
+.section-4 > div:first-child,
+.section-6 > div:first-child img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.section-3, .section-7, .section-11 {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.section-4 > div:first-child {
+    background: url('../assets/images/ME.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 2rem;
+}
+
+.section-4 > div:first-child p {
+    float: left;
+    margin-right: 15rem;
+}
+
+.section-4 > div:first-child button {
+    float: left;
+    margin-right: 15rem;
+}
+
+.testimonials {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+}
+
+.testimonial {
+    flex: 0 0 auto;
+    width: 250px;
+    background: #f2f2f2;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.section-8 .testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.section-8 .testimonial button {
+    margin-top: 1rem;
+}
+
+.section-10 img {
+    height: 30vh;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+.section-2 p:nth-of-type(2), .section-4 > div:last-child p:first-child, .section-5 > div:first-child p:first-child, .section-9 > div:first-child p:nth-of-type(2), .section-10 p:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+}
+
+.faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0.5rem 0;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+.section.section-12 {
+    background-color: azure;
+    border-radius: 20px;
+}
+
+.section-12 > div:first-child p {
+    padding: 10px;
+}
+
+.section-12 > div:first-child p:first-child {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-12 > div:first-child p:last-child {
+    margin-top: 2rem;
+}
+
+.section-12 > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.section-12 > div:last-child form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    height: 30vh;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.section-12 > div:last-child input{
+    border: none;
+    border-bottom: 2px solid #333;
+    background: transparent;
+    padding: 8px 4px;
+    width: 250px;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.section-12 > div:last-child p {
+    font-weight: bold;
+    font-size: 3vh;
+    margin-bottom: 1rem;
+}
+
+.section-13 > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vh;
+    border-radius: 20px;
+    background-color: snow;
+    box-sizing: border-box;
+}
+.section-13 .count {
+    column-count: 3;
+    column-gap: 1.5rem;
+    padding: 1rem 0;
+    margin: 0;
+}
+.section-13 .count p {
+    margin: 0 0 0.5rem 0;
+    break-inside: avoid;
+    text-align: left;
+}
+
+.section-13 > div:last-child {
+    background: url("../assets/images/ME1.jpg") no-repeat center center/cover;
+    border-radius: 20px;
+    padding: 2vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.section-13 > div:last-child p {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.section-13 button {
+    width: 14rem;
+    background-color: snow;
+    color: black;
+    margin-bottom: 0.1rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: none;
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+        text-align: left;
+    }
+
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+        text-align: left;
+    }
+    .nav-left.open,
+    .nav-right.open {
+        display: block;
+    }
+
+    .nav-container.open {
+        display: flex;
+    }
+
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .section.section-2,
+    .section.section-4,
+    .section.section-5,
+    .section.section-9,
+    .section.section-10,
+    .section.section-12 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section.section-2 {
+        margin-top: 5rem;
+    }
+
+    .section.section-2 > div,
+    .section.section-4 > div,
+    .section.section-5 > div,
+    .section.section-9 > div,
+    .section.section-10 > div,
+    .section.section-12 > div {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .section-1-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-1-content p {
+        max-width: 100%; /* let it span full width */
+        white-space: normal; /* allows line wrapping */
+        margin: 0 1rem;
+    }
+
+    .section.section-1 {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .section-3.section-7 {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+  .section-3 p,.section-7 p {
+        /*display: inline;*/
+        margin: 0 -10rem;
+        padding: 0;
+        /*white-space: nowrap;*/
+        font-size: 1rem;
+    }
+
+.section-4 > div:first-child p{
+    font-size: 1rem;
+    padding-left: 8vh;
+    white-space: nowrap;
+}
+.section-4 > div:first-child button{
+    font-size: 1rem;
+    margin-left: 5vh;
+    white-space: nowrap;
+    width: 10vh;
+}
+
+.section-4 > div:last-child p:nth-of-type(2) {
+    font-size: 1.5rem;
+}
+
+.section-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 5vh !important;
+}
+
+}
+
+
